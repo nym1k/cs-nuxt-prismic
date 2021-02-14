@@ -4,6 +4,20 @@
   </div>
 </template>
 
+<script>
+export default {
+  head () {
+    return {
+      script: [
+        {
+          src: 'https://static.cdn.prismic.io/prismic.js?new=true&repo=countless-skies-nuxtjs'
+        }
+      ]
+    }
+  }
+}
+</script>
+
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

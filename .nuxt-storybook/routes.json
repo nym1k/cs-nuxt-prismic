@@ -6,6 +6,27 @@
     "_name": "_ce8b4a08"
   },
   {
+    "name": "merch",
+    "path": "/merch",
+    "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/merch/index.vue",
+    "chunkName": "pages/merch/index",
+    "_name": "_4519a792"
+  },
+  {
+    "name": "merch-uid",
+    "path": "/merch/:uid",
+    "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/merch/_uid.vue",
+    "chunkName": "pages/merch/_uid",
+    "_name": "_c76f0388"
+  },
+  {
+    "name": "post-uid",
+    "path": "/post/:uid?",
+    "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/post/_uid.vue",
+    "chunkName": "pages/post/_uid",
+    "_name": "_02805995"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/index.vue",
