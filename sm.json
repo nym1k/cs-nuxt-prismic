@@ -1,0 +1,9 @@
+{
+  "libraries": [
+    "@/slices",
+    "vue-essential-slices"
+  ],
+  "apiEndpoint": "https://countless-skies-nuxtjs.cdn.prismic.io/api/v2",
+  "storybook": "http://localhost:3003",
+  "_latest": "0.0.43"
+}

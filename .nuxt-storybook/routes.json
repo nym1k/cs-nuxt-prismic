@@ -1,0 +1,22 @@
+[
+  {
+    "name": "prismic-preview",
+    "path": "/preview",
+    "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/.nuxt-storybook/prismic/pages/preview.vue",
+    "_name": "_ce8b4a08"
+  },
+  {
+    "name": "Index",
+    "path": "/Index",
+    "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/Index.vue",
+    "chunkName": "pages/Index",
+    "_name": "_0b30e027"
+  },
+  {
+    "name": "uid",
+    "path": "/:uid?",
+    "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/_uid.vue",
+    "chunkName": "pages/_uid",
+    "_name": "_799bafa8"
+  }
+]
