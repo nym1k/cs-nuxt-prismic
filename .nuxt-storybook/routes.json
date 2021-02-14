@@ -6,15 +6,15 @@
     "_name": "_ce8b4a08"
   },
   {
-    "name": "Index",
-    "path": "/Index",
-    "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/Index.vue",
-    "chunkName": "pages/Index",
-    "_name": "_0b30e027"
+    "name": "index",
+    "path": "/",
+    "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_d8827f72"
   },
   {
     "name": "uid",
-    "path": "/:uid?",
+    "path": "/:uid",
     "component": "/Users/rossk/Desktop/Github/Personal/cs-nuxt-prismic/pages/_uid.vue",
     "chunkName": "pages/_uid",
     "_name": "_799bafa8"

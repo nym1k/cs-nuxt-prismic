@@ -5,7 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _ce8b4a08 = () => interopDefault(import('./prismic/pages/preview.vue' /* webpackChunkName: "" */))
-const _0b30e027 = () => interopDefault(import('../pages/Index.vue' /* webpackChunkName: "pages/Index" */))
+const _d8827f72 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _799bafa8 = () => interopDefault(import('../pages/_uid.vue' /* webpackChunkName: "pages/_uid" */))
 
 // TODO: remove in Nuxt 3
@@ -29,11 +29,11 @@ export const routerOptions = {
     component: _ce8b4a08,
     name: "prismic-preview"
   }, {
-    path: "/Index",
-    component: _0b30e027,
-    name: "Index"
+    path: "/",
+    component: _d8827f72,
+    name: "index"
   }, {
-    path: "/:uid?",
+    path: "/:uid",
     component: _799bafa8,
     name: "uid"
   }],

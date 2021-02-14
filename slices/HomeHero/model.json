@@ -11,6 +11,14 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "HomeHero",
       "primary": {
+        "logo": {
+          "config": {
+            "label": "Logo",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
         "title": {
           "type": "StructuredText",
           "config": {
