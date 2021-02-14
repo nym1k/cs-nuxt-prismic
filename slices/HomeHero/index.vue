@@ -20,9 +20,10 @@
       :style="`opacity: ${slice.primary.backgroundOpacity}`"
     />
     <video
-      autoplay="autoplay"
-      loop="true"
-      muted="muted"
+      autoplay
+      loop
+      muted
+      playsinline
       poster="none"
       class="her-Home_BackgroundVideo"
     >
