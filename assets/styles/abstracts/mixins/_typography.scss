@@ -1,0 +1,136 @@
+@mixin heading {
+  font-family: $font-heading;
+  text-transform: lowercase;
+}
+
+@mixin heading_with_margin {
+  @include heading;
+  margin-bottom: $item-padding-small;
+
+  @include break-min($sm) {
+    margin-bottom: $item-padding;
+  }
+}
+
+@mixin font_heading-1 {
+  font-size: 2.5rem; // 40px
+  line-height: 2.875rem; // 46px
+
+  @include break-min($sm) {
+    font-size: 3.4375rem; // 55px
+    line-height: 4.6875rem; // 75px
+  }
+
+  @include break-min($md) {
+    font-size: 4.375rem; // 70px
+    line-height: 5.375rem; // 86px
+  }
+}
+
+@mixin font_heading-2 {
+  font-size: 1.875rem; // 30px
+  line-height: 2.375rem; // 38px
+
+  @include break-min($sm) {
+    font-size: 2.1875rem; // 35px
+    line-height: 2.625rem; // 42px
+  }
+
+  @include break-min($md) {
+    font-size: 3.125rem; // 50px
+    line-height: 3.8125rem; // 61px
+  }
+}
+
+@mixin font_heading-3 {
+  font-size: 1.5625rem; // 25px
+  line-height: 1.875rem; // 30px
+
+  @include break-min($sm) {
+    font-size: 1.5625rem; // 25px
+    line-height: 1.875rem; // 30px
+  }
+
+  @include break-min($md) {
+    font-size: 1.875rem; // 30px
+    line-height: 2.25rem; // 36px
+  }
+}
+
+@mixin font_title-1 {
+  font-size: 1.375rem; // 22px
+  line-height: 1.5625rem; // 25px
+
+  @include break-min($sm) {
+    font-size: 1.5625rem; // 25px
+    line-height: 2.1875rem; // 35px
+  }
+
+  @include break-min($md) {
+    font-size: 1.5625rem; // 25px
+    line-height: 2.1875rem; // 35px
+  }
+}
+
+@mixin font_title-2 {
+  font-size: 1.125rem; // 18px
+  line-height: 1.5rem; // 24px
+
+  @include break-min($sm) {
+    font-size: 1.125rem; // 18px
+    line-height: 1.5rem; // 24px
+  }
+
+  @include break-min($md) {
+    font-size: 1.25rem; // 20px
+    line-height: 1.5rem; // 24px
+  }
+}
+
+@mixin font_sub-title {
+  font-size: 0.875rem; // 14px
+  font-weight: $fw-bold;
+  line-height: 1.5625rem; // 25px
+  text-transform: uppercase;
+}
+
+@mixin font_copy-text-1 {
+  font-size: 1rem; // 16px
+  line-height: 1.1875rem; // 19px
+}
+
+@mixin font_copy-text-2 {
+  font-size: 1.125rem; // 18px
+  line-height: 1.625rem; // 26px
+
+  @include break-min($sm) {
+    font-size: 1.25rem; // 20px
+    line-height: 1.75rem; // 28px
+  }
+
+  @include break-min($sm) {
+    font-size: 1.375rem; // 22px
+    line-height: 2.1875rem; // 35px
+  }
+}
+
+@mixin font_caption_text {
+  font-size: 1rem; // 16px
+  font-style: italic;
+  line-height: 1.1875rem; // 19px
+}
+
+@mixin font_base_text {
+  font-size: $font-base-size;
+  line-height: $font-base-line-height;
+}
+
+@mixin font_small_text {
+  font-size: smaller;
+}
+
+@mixin paragraph {
+  @include font_base_text;
+  color: inherit;
+  margin-bottom: $item-padding-small;
+}

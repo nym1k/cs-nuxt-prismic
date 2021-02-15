@@ -20,6 +20,9 @@ module.exports = {
     'vue/no-v-html': 'off',
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
     'no-console': PRODUCTION_MODE ? 'error' : 'off',
-    'no-debugger': PRODUCTION_MODE ? 'error' : 'off'
+    'no-debugger': PRODUCTION_MODE ? 'error' : 'off',
+    'vue/attribute-hyphenation': [2, 'never', {
+      ignore: ['enter-active-class']
+    }]
   }
 }

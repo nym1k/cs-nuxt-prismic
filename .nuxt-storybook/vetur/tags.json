@@ -1,4 +1,16 @@
 {
+  "CardMerch": {
+    "description": "Auto imported from /components/cards/Merch.vue"
+  },
+  "LazyCardMerch": {
+    "description": "Auto imported from /components/cards/Merch.vue"
+  },
+  "LayoutSection": {
+    "description": "Auto imported from /components/layout/Section.vue"
+  },
+  "LazyLayoutSection": {
+    "description": "Auto imported from /components/layout/Section.vue"
+  },
   "Logo": {
     "description": "Auto imported from /components/Logo.vue"
   },

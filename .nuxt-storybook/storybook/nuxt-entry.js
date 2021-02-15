@@ -14,6 +14,8 @@ import { createApp } from '../'
  */
 window.__NUXT__ = { config: {} };
 ;
+;
+(function(){var l=document.createElement('link');l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC";document.querySelector("head").appendChild(l);})();
 
 // Fetch mixin
 if (!Vue.__nuxt__fetch__mixin__) {

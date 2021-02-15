@@ -1,42 +1,48 @@
 <template>
-  <section>
-    <prismic-rich-text
-      :field="pageContent.title"
-    />
-    <prismic-rich-text
-      :field="pageContent.description"
-    />
-    <article>
-      <!-- Check blog posts exist -->
-      <div v-if="merchItems.length !== 0" class="blog-main">
+  <LayoutSection
+    v-if="pageContent && merchItems"
+  >
+    <template #header>
+      <prismic-rich-text
+        :field="pageContent.title"
+      />
+      <prismic-rich-text
+        :field="pageContent.description"
+      />
+    </template>
+    <template #default>
+      <ul
+        v-if="merchItems.length !== 0"
+        class="lst-Listing_Items"
+      >
         <!-- Template for blog posts -->
-        <section
+        <li
           v-for="item in merchItems"
           :key="item.id"
           :post="item"
-          class="blog-merch"
+          class="lst-Listing_Item"
         >
-          <!-- Here :post="merch" passes the data to the component -->
-          <nuxt-link
-            :to="`/merch/${item.uid}`"
-          >
-            <div class="blog-merch">
-              <prismic-image :field="item.data.featured_image" />
-              <h2>{{ $prismic.asText(item.data.title) }}</h2>
-            </div>
-          </nuxt-link>
-        </section>
-      </div>
+          <CardMerch
+            v-bind="{
+              uid: item.uid,
+              title: item.data.title,
+              image: item.data.featured_image
+            }"
+          />
+        </li>
+      </ul>
       <!-- If no blog posts return message -->
       <div v-else class="blog-main">
         <p>No Posts published at this time.</p>
       </div>
-    </article>
-  </section>
+    </template>
+  </LayoutSection>
 </template>
 
 <script>
 export default {
+  transition: 'transition',
+
   async asyncData ({ $prismic, error }) {
     try {
       // Query to get blog home content
@@ -65,3 +71,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  @include page_transition;
+
+  .lst-Listing_Items {
+    @include structural_ul;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $grid-gap;
+  }
+</style>

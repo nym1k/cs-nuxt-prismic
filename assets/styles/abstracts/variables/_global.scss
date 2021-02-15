@@ -1,0 +1,54 @@
+//-------------------------------------------------
+// GLOBAL
+//-------------------------------------------------
+
+$global-inner: 77.5rem; // 1240px
+
+$grid-gap: 1.5rem; // 24px
+$item-padding-small: 1rem; // 16px
+$item-padding: 1.5rem; // 24px
+
+$gutter-small: 1.5rem; // 24px
+$gutter-medium: 3rem; // 48px
+$gutter-large: 6.25rem; // 100px
+
+$restrained-width: 40rem + ($gutter-large * 2); // 640px
+
+$spacer-xsmall: 1.5rem; // 36px
+$spacer-small: 2.25rem; // 36px
+$spacer-medium: 3rem; // 48px
+$spacer-large: 3.75rem; // 60px
+$spacer-xlarge: 6.25rem; // 100px
+
+//-------------------------------------------------
+// BREAKPOINTS
+//-------------------------------------------------
+
+$xxs: 22.5rem; // 360px
+$xs: 30rem; // 480px
+$sm: 48rem; // 768px
+$md: 60rem; // 960px
+$lg: 75rem; // 1200px
+$xlg: 90rem; // 1440px
+
+//-------------------------------------------------
+// BORDERS
+//-------------------------------------------------
+
+$border-solid-thin: 0.0625rem solid; // 1px
+
+//-------------------------------------------------
+// FONTS
+//-------------------------------------------------
+
+$font-heading: 'Marcellus SC', sans-serif;
+$font-body: 'Marcellus', sans-serif;
+$font-base-size: 16px;
+$font-base-line-height: 1.1875rem; // 19px
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-black: 900;

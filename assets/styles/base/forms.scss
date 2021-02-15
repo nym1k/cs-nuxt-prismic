@@ -1,0 +1,64 @@
+//-------------------------------------------------
+// FORMS
+//-------------------------------------------------
+
+label {
+  font-size: inherit;
+  margin-bottom: 1rem;
+
+  display: block;
+}
+
+fieldset {
+  margin-bottom: 1em;
+}
+
+input,
+textarea {
+  @include font_copy-text-1;
+  background-color: #363636;
+  border: 1px solid $color-white;
+  color: $color-white;
+  font-family: $font-body;
+  margin: 0.375rem 0 0;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+
+  display: block;
+
+  transition: color 0.3s ease;
+
+  &::placeholder {
+    color: $color-grey-hover;
+    font-family: $font-body;
+    font-weight: 400;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.5em;
+  width: auto;
+}
+
+input[type="submit"] {
+  @include button_primary;
+}
+
+::-webkit-input-placeholder {
+  color: lighten($color-body-font, 10%);
+}
+
+::-moz-placeholder {
+  color: lighten($color-body-font, 10%);
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: lighten($color-body-font, 10%);
+}
+
+:-ms-input-placeholder {
+  color: lighten($color-body-font, 10%);
+}

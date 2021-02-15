@@ -26,15 +26,27 @@ export default {
     }]
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['vue-essential-slices/src/styles/styles.scss'],
+  css: ['vue-essential-slices/src/styles/styles.scss', '~assets/styles/base.scss'],
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: [
+    '~/components', // shortcut to { path: '~/components' }
+    { path: '~/components/cards/', prefix: 'card' },
+    { path: '~/components/layout/', prefix: 'layout' }
+  ],
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [// https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module', // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module'],
+    '@nuxtjs/style-resources',
+    '@nuxtjs/stylelint-module',
+    ['@nuxtjs/google-fonts', {
+      families: {
+        Marcellus: true,
+        'Marcellus+SC': true
+      }
+    }]
+  ],
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [// https://go.nuxtjs.dev/axios
     '@nuxtjs/axios', ['@nuxtjs/prismic', {
@@ -51,6 +63,9 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     transpile: ['vue-slicezone', 'nuxt-sm']
+  },
+  styleResources: {
+    scss: ['~assets/styles/abstracts.scss']
   },
   storybook: {
     stories: ['~/slices/**/*.stories.js']

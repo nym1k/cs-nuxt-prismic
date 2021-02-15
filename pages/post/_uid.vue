@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 class="blog-title">{{ $prismic.asText(document.title) }}</h1>
+    <h1 class="blog-title">
+      {{ $prismic.asText(document.title) }}
+    </h1>
   </div>
 </template>
 

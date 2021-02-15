@@ -1,0 +1,58 @@
+//-------------------------------------------------
+// Buttons
+//-------------------------------------------------
+
+@mixin button_reset {
+  appearance: none;
+  background-color: transparent;
+}
+
+@mixin button {
+  @include button_reset;
+  border: 0.125rem solid transparent; // 2px
+  border-radius: 0.125rem; // 2px
+  cursor: pointer;
+  font-family: $font-body;
+  font-size: $font-base-size;
+  font-weight: $fw-bold;
+  line-height: 1rem;
+  margin: 0.75rem 0; // 12px 0
+  outline: 0;
+  padding: 0.75rem 1.875rem; // 12px 30px
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  display: inline-block;
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease,
+    border-color 0.35s ease;
+
+  @include break-min($sm) {
+    font-size: 0.875rem; // 14px
+    padding: 1rem 2.875rem; // 16px 46px
+  }
+}
+
+@mixin button_primary {
+  @include button;
+  color: $color-white;
+  background-color: $color-primary;
+  border-color: $color-primary;
+
+  &:hover {
+    background-color: $color-secondary;
+    border-color: $color-white;
+    color: $color-white;
+  }
+}
+
+@mixin button_text {
+  color: currentColor;
+  text-decoration: none;
+  transition: color .3s ease;
+  
+  &:hover {
+    color: $color-primary;
+  }
+}

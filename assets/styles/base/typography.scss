@@ -1,0 +1,70 @@
+//-------------------------------------------------
+// TYPOGRAPHY
+//-------------------------------------------------
+
+h2, h3, h4, h5, h6 {
+  @include no_margin_padding;
+}
+
+h2 {
+  @include font_heading-1;
+}
+
+h3 {
+  @include font_heading-2;
+}
+
+h4 {
+  @include font_heading-3;
+}
+
+h5 {
+  @include font_title-1;
+}
+
+h6 {
+  @include font_title-2;
+}
+
+p {
+  @include paragraph;
+}
+
+strong {
+  a &,
+  p & {
+    font-weight: $fw-bold;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+  position: relative;
+  text-decoration: underline;
+
+  p & {
+    color: currentColor;
+  }
+
+  .has-text-color & {
+    color: inherit;
+  }
+}
+
+s {
+  font-size: smaller;
+  text-decoration: none;
+  vertical-align: super;
+}
+
+.has-text-align-right {
+  text-align: right;
+}
+
+.has-text-align-center {
+  text-align: center;
+}

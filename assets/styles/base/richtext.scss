@@ -1,0 +1,66 @@
+//-------------------------------------------------
+// RICHTEXT
+//-------------------------------------------------
+
+.cms-richtext {
+  h2, h3, h4, h5, h6 {
+    margin-top: $item-padding;
+    margin-bottom: $item-padding;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    @include font_copy-text-2;
+    margin-top: $item-padding;
+    margin-bottom: $item-padding;
+
+    h2 + &,
+    h3 + &,
+    h4 + &,
+    h5 + &,
+    h6 + & {
+      margin-top: $item-padding;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a,
+  p a {
+    @include button_text;
+    font-weight: $fw-bold;
+  }
+
+  ol, ul {
+    margin-top: $item-padding;
+    margin-left: 1.25rem; // 20px
+    margin-bottom: $item-padding;
+  }
+
+  li {
+    @include font_copy-text-2;
+    color: inherit;
+    margin-bottom: 0.625rem; // 10px
+
+    ul & {
+      list-style: disc outside none;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::marker {
+      font-weight: $fw-bold;
+    }
+  }
+}

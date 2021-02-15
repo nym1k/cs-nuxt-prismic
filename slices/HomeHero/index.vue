@@ -5,6 +5,12 @@
         :field="slice.primary.logo"
         class="her-Home_Logo"
       />
+      <NuxtLink
+        to="/merch"
+        class="her-Home_Link"
+      >
+        Merch
+      </NuxtLink>
       <prismic-rich-text
         :field="slice.primary.title"
         class="her-Home_Title"
@@ -76,6 +82,11 @@ export default {
 
 .her-Home_Text {
   display: none;
+}
+
+.her-Home_Link {
+  color: $color-white;
+  margin-top: $spacer-large;
 }
 
 .her-Home_BackgroundImage {

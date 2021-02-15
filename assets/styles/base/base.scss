@@ -1,0 +1,36 @@
+//-------------------------------------------------
+// BASE STYLES
+//-------------------------------------------------
+
+body {
+  font-size: $font-base-size;
+  background-color: $color-secondary;
+  color: $color-body-font;
+  font-family: $font-body;
+}
+
+body, button, input, select, textarea {
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+
+  display: block;
+}
+
+cite,
+figcaption {
+  font-style: italic;
+  margin-top: 0.75rem; // 12px
+  color: $color-secondary;
+  opacity: 0.7;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+}
