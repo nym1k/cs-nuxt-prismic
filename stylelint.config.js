@@ -18,5 +18,6 @@ module.exports = {
         ignorePseudoElements: ['v-deep']
       }
     ]
-  }
+  },
+  ignoreFiles: ['.nuxt-storybook/*']
 }
