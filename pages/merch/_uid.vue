@@ -71,7 +71,7 @@ export default {
     }
   },
 
-  created () {
+  mounted () {
     this.$nextTick(() => {
       this.$store.commit('changeNavLayout', 'page')
     })

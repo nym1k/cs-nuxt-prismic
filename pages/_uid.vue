@@ -13,7 +13,7 @@ export default {
     SliceZone
   },
 
-  created () {
+  mounted () {
     this.$nextTick(() => {
       this.$store.commit('changeNavLayout', 'page')
     })
