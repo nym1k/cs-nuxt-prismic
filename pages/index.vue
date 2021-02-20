@@ -16,9 +16,7 @@ export default {
   transition: 'transition',
 
   mounted () {
-    this.$nextTick(() => {
-      this.$store.commit('changeNavLayout', 'homepage')
-    })
+    this.$store.commit('changeNavLayout', 'homepage')
   }
 }
 </script>

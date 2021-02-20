@@ -24,9 +24,7 @@ export default {
   },
 
   mounted () {
-    this.$nextTick(() => {
-      this.$store.commit('changeNavLayout', 'page')
-    })
+    this.$store.commit('changeNavLayout', 'page')
   }
 }
 </script>
