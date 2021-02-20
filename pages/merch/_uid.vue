@@ -60,7 +60,7 @@ export default {
       // Query to get post content
       const product = (await $prismic.api.getByUID('product', params.uid)).data
 
-      console.log(product)
+      console.log(product) // eslint-disable-line no-console
       // Returns data to be used in template
       return {
         product
@@ -72,7 +72,9 @@ export default {
   },
 
   created () {
-    this.$store.commit('changeNavLayout', 'page')
+    this.$nextTick(() => {
+      this.$store.commit('changeNavLayout', 'page')
+    })
   }
 }
 </script>

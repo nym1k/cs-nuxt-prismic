@@ -14,7 +14,9 @@ export default {
   },
 
   created () {
-    this.$store.commit('changeNavLayout', 'page')
+    this.$nextTick(() => {
+      this.$store.commit('changeNavLayout', 'page')
+    })
   }
 }
 </script>

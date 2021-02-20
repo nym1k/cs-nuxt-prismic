@@ -21,6 +21,12 @@ export default {
       // Returns error page
       error({ statusCode: 404, message: 'Page not found' })
     }
+  },
+
+  created () {
+    this.$nextTick(() => {
+      this.$store.commit('changeNavLayout', 'page')
+    })
   }
 }
 </script>

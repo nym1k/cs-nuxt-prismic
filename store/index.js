@@ -4,9 +4,10 @@ export const state = () => ({
 })
 
 export const mutations = {
-  changeNavLayout (state, layout) {
+  changeNavLayout: (state, layout) => {
     state.layout = layout
   },
+
   updateHeaderData: (state, headerData) => {
     state.headerData = headerData
   }
@@ -18,8 +19,10 @@ export const actions = {
       const currentHeaderData = (await $prismic.api.getSingle('header')).data
       commit('updateHeaderData', currentHeaderData)
     } catch (e) {
+      /* eslint-disable */
       console.error(e)
       console.error('Please create a menu document')
+      /* eslint-enable */
     }
   }
 }
