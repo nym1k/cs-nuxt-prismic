@@ -1,6 +1,6 @@
 <template>
   <LayoutSection
-    v-if="pageContent && merchItems"
+    v-if="pageContent && productItems"
   >
     <template #header>
       <prismic-rich-text
@@ -12,17 +12,17 @@
     </template>
     <template #default>
       <ul
-        v-if="merchItems.length !== 0"
+        v-if="productItems.length !== 0"
         class="lst-Listing_Items"
       >
         <!-- Template for blog posts -->
         <li
-          v-for="item in merchItems"
+          v-for="item in productItems"
           :key="item.id"
           :post="item"
           class="lst-Listing_Item"
         >
-          <CardMerch
+          <CardProduct
             v-bind="{
               uid: item.uid,
               title: item.data.title,
@@ -46,18 +46,18 @@ export default {
   async asyncData ({ $prismic, error }) {
     try {
       // Query to get blog home content
-      const pageContent = (await $prismic.api.getSingle('merch_index')).data
+      const pageContent = (await $prismic.api.getSingle('products')).data
 
       // Query to get posts content to preview
-      const merchItems = await $prismic.api.query(
-        $prismic.predicates.at('document.type', 'merch'),
+      const productItems = await $prismic.api.query(
+        $prismic.predicates.at('document.type', 'product'),
         { orderings: '[my.post.date desc]' }
       )
 
       // Returns data to be used in template
       return {
         pageContent,
-        merchItems: merchItems.results
+        productItems: productItems.results
       }
     } catch (e) {
       // Returns error page
@@ -80,5 +80,13 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: $grid-gap;
+
+    @include break-min($sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include break-min($md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 </style>

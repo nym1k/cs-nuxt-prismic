@@ -1,36 +1,44 @@
 <template>
   <LayoutSection
-    v-if="document"
+    v-if="product"
   >
+    <template #header>
+      <NuxtLink
+        to="/merch"
+        class="prd-Link"
+      >
+        &lt; Back to All Merch
+      </NuxtLink>
+    </template>
     <template #default>
-      <div class="mrc-Columns">
-        <div class="mrc-Column">
+      <div class="prd-Columns">
+        <div class="prd-Column">
           <PrismicImage
-            :field="document.featured_image"
+            :field="product.featured_image"
           />
         </div>
-        <div class="mrc-Column">
+        <div class="prd-Column">
           <h3
-            class="mrc-Title"
-            v-html="$prismic.asText(document.title)"
+            class="prd-Title"
+            v-html="$prismic.asText(product.title)"
           />
           <PrismicRichText
-            class="mrc-Text cms-richtext"
-            :field="document.description"
+            class="prd-Text cms-richtext"
+            :field="product.description"
           />
-          <div class="mrc-Purchase">
-            <p class="mrc-Purchase_Heading">
+          <div class="prd-Purchase">
+            <p class="prd-Purchase_Heading">
               Purchase now:
             </p>
-            <ul class="mrc-Purchase_Items">
+            <ul class="prd-Purchase_Items">
               <li
-                v-for="(item, index) in document.links"
+                v-for="(item, index) in product.links"
                 :key="'link-item-' + index"
-                class="mrc-Purchase_Item"
+                class="prd-Purchase_Item"
               >
                 <PrismicLink
-                  :field="item.store_link"
-                  class="mrc-Purchase_Button"
+                  :field="item.link_url"
+                  class="prd-Purchase_Button"
                 >
                   {{ item.link_text[0].text }}
                 </PrismicLink>
@@ -39,14 +47,6 @@
           </div>
         </div>
       </div>
-    </template>
-    <template #footer>
-      <NuxtLink
-        to="/merch"
-        class="mrc-Link"
-      >
-        &lt; Back to All Merch
-      </NuxtLink>
     </template>
   </LayoutSection>
 </template>
@@ -58,12 +58,12 @@ export default {
   async asyncData ({ $prismic, params, error }) {
     try {
       // Query to get post content
-      const merch = (await $prismic.api.getByUID('merch', params.uid)).data
+      const product = (await $prismic.api.getByUID('product', params.uid)).data
 
-      console.log(merch)
+      console.log(product)
       // Returns data to be used in template
       return {
-        document: merch
+        product
       }
     } catch (e) {
       // Returns error page
@@ -76,47 +76,47 @@ export default {
 <style lang="scss" scoped>
   @include page_transition;
 
-  .mrc-Columns {
+  .prd-Columns {
     display: flex;
     justify-content: space-between;
   }
 
-  .mrc-Column {
+  .prd-Column {
     width: calc(50% - #{$grid-gap / 2});
   }
 
-  .mrc-Title {
+  .prd-Title {
     @include heading_with_margin;
   }
 
-  .mrc-Purchase {
+  .prd-Purchase {
     background-color: $color-secondary-dark;
     margin-top: $spacer-medium;
     padding: $item-padding;
   }
 
-  .mrc-Purchase_Heading {
+  .prd-Purchase_Heading {
     @include font_title-1;
     @include heading_with_margin;
   }
 
-  .mrc-Purchase_Items {
+  .prd-Purchase_Items {
     @include structural_ul;
     margin-top: $item-padding;
     display: flex;
   }
 
-  .mrc-Purchase_Item {
+  .prd-Purchase_Item {
     &:not(:last-child) {
       margin-right: $grid-gap;
     }
   }
 
-  .mrc-Purchase_Button {
+  .prd-Purchase_Button {
     @include button_primary;
   }
 
-  .mrc-Link {
+  .prd-Link {
     @include button_text;
   }
 </style>

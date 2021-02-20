@@ -13,6 +13,7 @@
     "storybook": "nuxt storybook",
     "build-storybook": "nuxt storybook build",
     "slicemachine": "start-slicemachine --port 9999",
+    "sm-dev": "prismic sm --develop",
     "bundle": "node ./node_modules/sm-commons/scripts/bundle"
   },
   "lint-staged": {

@@ -12,7 +12,7 @@ import { createApp } from '../'
  * @nuxtjs/storybook
  * execute plugin scripts
  */
-window.__NUXT__ = { config: {} };
+window.__NUXT__ = { config: {"app":{"basePath":"/","assetsPath":"/_nuxt/","cdnURL":null}} };
 ;
 ;
 (function(){var l=document.createElement('link');l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC";document.querySelector("head").appendChild(l);})();
