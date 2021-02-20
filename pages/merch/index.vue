@@ -64,10 +64,15 @@ export default {
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
+
   head () {
     return {
       title: 'Prismic Nuxt.js Blog'
     }
+  },
+
+  created () {
+    this.$store.commit('changeNavLayout', 'page')
   }
 }
 </script>

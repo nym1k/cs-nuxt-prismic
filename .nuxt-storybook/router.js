@@ -27,10 +27,6 @@ export const routerOptions = {
     component: _ce8b4a08,
     name: "prismic-preview"
   }, {
-    path: "/preview",
-    component: _ce8b4a08,
-    name: "prismic-preview"
-  }, {
     path: "/merch",
     component: _4519a792,
     name: "merch"

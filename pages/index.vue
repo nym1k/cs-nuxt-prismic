@@ -9,10 +9,14 @@
 import SliceZone from 'vue-slicezone'
 
 export default {
-  transition: 'transition',
-
   components: {
     SliceZone
+  },
+
+  transition: 'transition',
+
+  created () {
+    this.$store.commit('changeNavLayout', 'homepage')
   }
 }
 </script>

@@ -11,6 +11,10 @@ import SliceZone from 'vue-slicezone'
 export default {
   components: {
     SliceZone
+  },
+
+  created () {
+    this.$store.commit('changeNavLayout', 'page')
   }
 }
 </script>

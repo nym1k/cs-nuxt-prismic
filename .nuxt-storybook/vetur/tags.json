@@ -2,6 +2,9 @@
   "CardProduct": {
     "description": "Auto imported from components/cards/Product.vue"
   },
+  "LayoutHeader": {
+    "description": "Auto imported from components/layout/Header.vue"
+  },
   "LayoutSection": {
     "description": "Auto imported from components/layout/Section.vue"
   },
