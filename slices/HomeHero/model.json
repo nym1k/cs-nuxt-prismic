@@ -11,14 +11,6 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "HomeHero",
       "primary": {
-        "logo": {
-          "config": {
-            "label": "Logo",
-            "constraint": {},
-            "thumbnails": []
-          },
-          "type": "Image"
-        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -27,13 +19,14 @@
             "placeholder": "This is where it all begins..."
           }
         },
-        "description": {
-          "type": "StructuredText",
+        "text": {
           "config": {
-            "single": "paragraph",
-            "label": "Description",
-            "placeholder": "A nice description of your product"
-          }
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          },
+          "type": "StructuredText"
         },
         "backgroundImage": {
           "config": {
@@ -57,6 +50,32 @@
             ]
           },
           "type": "Select"
+        },
+        "showVideo": {
+          "config": {
+            "label": "Show Background Video",
+            "placeholder": "",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          },
+          "type": "Boolean"
+        },
+        "buttonPrimary": {
+          "config": {
+            "label": "Primary Button",
+            "placeholder": "",
+            "allowTargetBlank": true
+          },
+          "type": "Link"
+        },
+        "buttonSecondary": {
+          "config": {
+            "label": "Secondary Button",
+            "placeholder": "",
+            "allowTargetBlank": true
+          },
+          "type": "Link"
         }
       },
       "items": {}

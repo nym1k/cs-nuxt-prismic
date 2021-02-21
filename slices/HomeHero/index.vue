@@ -1,25 +1,45 @@
 <template>
   <section class="her-Home">
     <div class="her-Home_Content">
-      <prismic-image
-        :field="slice.primary.logo"
-        class="her-Home_Logo"
-      />
-      <prismic-rich-text
+      <PrismicRichText
         :field="slice.primary.title"
         class="her-Home_Title"
       />
-      <prismic-rich-text
-        :field="slice.primary.description"
+      <PrismicRichText
+        :field="slice.primary.text"
         class="her-Home_Text"
       />
+      <div
+        v-if="slice.primary.buttonPrimary || slice.primary.buttonSecondary"
+        class="her-Home_Buttons"
+      >
+        <ul class="her-Home_Item">
+          <li class="her-Home_Item">
+            <NuxtLink
+              v-if="slice.primary.buttonPrimary"
+              :to="slice.primary.buttonPrimary"
+            >
+              {{ slice.primary.buttonPrimary.text }}
+            </NuxtLink>
+          </li>
+          <li class="her-Home_Item">
+            <NuxtLink
+              v-if="slice.primary.buttonSecondary"
+              :to="slice.primary.buttonSecondary"
+            >
+              {{ slice.primary.buttonSecondary.text }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
     </div>
-    <prismic-image
+    <PrismicImage
       :field="slice.primary.backgroundImage"
       class="her-Home_BackgroundImage"
       :style="`opacity: ${slice.primary.backgroundOpacity}`"
     />
     <video
+      v-if="slice.primary.showVideo"
       autoplay
       loop
       muted
@@ -71,11 +91,6 @@ export default {
 
 .her-Home_Title {
   margin-bottom: 2em;
-  display: none;
-}
-
-.her-Home_Text {
-  display: none;
 }
 
 .her-Home_Link {

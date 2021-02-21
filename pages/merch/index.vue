@@ -26,7 +26,7 @@
             v-bind="{
               uid: item.uid,
               title: item.data.title,
-              image: item.data.featured_image
+              image: item.data.featured_image.small
             }"
           />
         </li>
@@ -53,6 +53,8 @@ export default {
         $prismic.predicates.at('document.type', 'product'),
         { orderings: '[my.post.date desc]' }
       )
+
+      console.log(productItems) // eslint-disable-line no-console
 
       // Returns data to be used in template
       return {
