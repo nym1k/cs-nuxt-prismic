@@ -10,3 +10,4 @@ You can directly use them in pages and other components without the need to impo
 - `<LayoutHeader>` | `<layout-header>` (components/layout/Header.vue)
 - `<LayoutSection>` | `<layout-section>` (components/layout/Section.vue)
 - `<Logo>` | `<logo>` (components/Logo.vue)
+- `<NavigationHeader>` | `<navigation-header>` (components/navigation/Header.vue)

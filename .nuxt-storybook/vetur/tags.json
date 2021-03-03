@@ -10,5 +10,8 @@
   },
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
+  },
+  "NavigationHeader": {
+    "description": "Auto imported from components/navigation/Header.vue"
   }
 }

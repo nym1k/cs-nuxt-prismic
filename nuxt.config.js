@@ -33,7 +33,9 @@ export default {
   components: [
     '~/components', // shortcut to { path: '~/components' }
     { path: '~/components/cards/', prefix: 'card' },
-    { path: '~/components/layout/', prefix: 'layout' }
+    { path: '~/components/global/', prefix: 'global' },
+    { path: '~/components/layout/', prefix: 'layout' },
+    { path: '~/components/navigation/', prefix: 'navigation' }
   ],
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [// https://go.nuxtjs.dev/eslint
