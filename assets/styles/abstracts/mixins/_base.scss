@@ -155,6 +155,12 @@
   height: 100%;
 }
 
+@mixin restrained_width {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $restrained-width;
+}
+
 @mixin ignore_restrained_width {
   @include break-min($lg) {
     margin-left: calc(-100vw / 2 + #{$restrained-width / 2});

@@ -33,6 +33,7 @@ export default {
   components: [
     '~/components', // shortcut to { path: '~/components' }
     { path: '~/components/cards/', prefix: 'card' },
+    { path: '~/components/heros/', prefix: 'hero' },
     { path: '~/components/global/', prefix: 'global' },
     { path: '~/components/layout/', prefix: 'layout' },
     { path: '~/components/navigation/', prefix: 'navigation' }

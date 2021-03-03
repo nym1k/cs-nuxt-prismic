@@ -1,8 +1,20 @@
 <template>
-  <div>
-    <h1 class="blog-title">
-      {{ $prismic.asText(document.title) }}
-    </h1>
+  <div class="pst-Post">
+    <HeroPost
+      v-bind="{
+        title: $prismic.asText(document.title),
+        date: document.published_date,
+        image: document.featured_image
+      }"
+    />
+    <div class="pst-Post_Inner">
+      <div class="pst-Post_Body">
+        <prismic-rich-text
+          :field="document.content"
+          class="pst-Post_Content cms-richtext"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -28,3 +40,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .pst-Post_Inner {
+    @include inner;
+  }
+
+  .pst-Post_Body {
+    @include spacer_body;
+  }
+
+  .pst-Post_Content {
+    @include restrained_width;
+  }
+</style>
