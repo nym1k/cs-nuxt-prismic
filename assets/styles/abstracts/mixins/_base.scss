@@ -113,6 +113,25 @@
 
 
 //-------------------------------------------------
+// Listing
+//-------------------------------------------------
+
+@mixin listing_grid {
+  @include structural_ul;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $grid-gap;
+
+  @include break-min($sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include break-min($md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+//-------------------------------------------------
 // Utilities
 //-------------------------------------------------
 

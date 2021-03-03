@@ -13,14 +13,14 @@
     <template #default>
       <ul
         v-if="productItems.length !== 0"
-        class="lst-Listing_Items"
+        class="pge-Listing_Items"
       >
         <!-- Template for blog posts -->
         <li
           v-for="item in productItems"
           :key="item.id"
           :post="item"
-          class="lst-Listing_Item"
+          class="pge-Listing_Item"
         >
           <CardProduct
             v-bind="{
@@ -82,18 +82,7 @@ export default {
 <style lang="scss" scoped>
   @include page_transition;
 
-  .lst-Listing_Items {
-    @include structural_ul;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: $grid-gap;
-
-    @include break-min($sm) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include break-min($md) {
-      grid-template-columns: repeat(4, 1fr);
-    }
+  .pge-Listing_Items {
+    @include listing_grid;
   }
 </style>
