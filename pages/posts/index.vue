@@ -51,7 +51,7 @@ export default {
       // Query to get posts content to preview
       const postItems = await $prismic.api.query(
         $prismic.predicates.at('document.type', 'post'),
-        { orderings: '[my.post.date desc]' }
+        { orderings: '[my.post.date]' }
       )
 
       // Returns data to be used in template
