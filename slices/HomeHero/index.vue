@@ -10,24 +10,28 @@
         class="her-Home_Text"
       />
       <div
-        v-if="slice.primary.buttonPrimary || slice.primary.buttonSecondary"
+        v-if="slice.primary.buttonPrimaryURL || slice.primary.buttonSecondaryURL"
         class="her-Home_Buttons"
       >
         <ul class="her-Home_Item">
-          <li class="her-Home_Item">
+          <li
+            v-if="slice.primary.buttonPrimaryURL"
+            class="her-Home_Item"
+          >
             <NuxtLink
-              v-if="slice.primary.buttonPrimary"
-              :to="slice.primary.buttonPrimary"
+              :to="slice.primary.buttonPrimaryURL"
             >
-              {{ slice.primary.buttonPrimary.text }}
+              {{ slice.primary.buttonPrimaryText }}
             </NuxtLink>
           </li>
-          <li class="her-Home_Item">
+          <li
+            v-if="slice.primary.buttonSecondaryURL"
+            class="her-Home_Item"
+          >
             <NuxtLink
-              v-if="slice.primary.buttonSecondary"
-              :to="slice.primary.buttonSecondary"
+              :to="slice.primary.buttonSecondaryURL"
             >
-              {{ slice.primary.buttonSecondary.text }}
+              {{ slice.primary.buttonSecondaryText }}
             </NuxtLink>
           </li>
         </ul>
@@ -66,6 +70,10 @@ export default {
         return {}
       }
     }
+  },
+
+  mounted () {
+    console.log(this.slice)
   }
 }
 </script>

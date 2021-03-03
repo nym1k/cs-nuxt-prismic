@@ -61,21 +61,33 @@
           },
           "type": "Boolean"
         },
-        "buttonPrimary": {
+        "buttonPrimaryText": {
           "config": {
-            "label": "Primary Button",
-            "placeholder": "",
-            "allowTargetBlank": true
+            "label": "Primary Button Text",
+            "placeholder": ""
           },
-          "type": "Link"
+          "type": "Text"
         },
-        "buttonSecondary": {
+        "buttonPrimaryURL": {
           "config": {
-            "label": "Secondary Button",
-            "placeholder": "",
-            "allowTargetBlank": true
+            "label": "Primary Button URL",
+            "placeholder": ""
           },
-          "type": "Link"
+          "type": "Text"
+        },
+        "buttonSecondaryText": {
+          "config": {
+            "label": "Secondary Button Text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "ButtonSecondaryURL": {
+          "config": {
+            "label": "Secondary Button URL",
+            "placeholder": ""
+          },
+          "type": "Text"
         }
       },
       "items": {}
