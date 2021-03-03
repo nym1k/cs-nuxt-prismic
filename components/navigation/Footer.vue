@@ -1,14 +1,14 @@
 <template>
-  <nav class="nav-Header">
-    <ul class="nav-Header_Items">
+  <nav class="nav-Footer">
+    <ul class="nav-Footer_Items">
       <li
-        v-for="navLink in $store.state.headerData['navigation_links']"
+        v-for="navLink in $store.state.footerData['navigation_links']"
         :key="navLink.id"
-        class="nav-Header_Item"
+        class="nav-Footer_Item"
       >
         <NuxtLink
           :to="$prismic.asText(navLink.link_url)"
-          class="nav-Header_Link"
+          class="nav-Footer_Link"
         >
           {{ $prismic.asText(navLink.link_text) }}
         </NuxtLink>
@@ -18,20 +18,19 @@
 </template>
 
 <style lang="scss" scoped>
-.nav-Header_Items {
+.nav-Footer_Items {
   @include structural_ul;
-  display: flex;
 }
 
-.nav-Header_Item {
-  margin-left: 1rem;
+.nav-Footer_Item {
+  margin-bottom: 1rem;
 
   &:first-child {
-    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
-.nav-Header_Link {
+.nav-Footer_Link {
   @include button_text;
 }
 </style>

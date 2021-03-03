@@ -27,7 +27,12 @@
 
 <style lang="scss" scoped>
 .layout-section {
-  @include spacer;
+  &:not(:only-child) {
+    @include spacer;
+  }
+  &:only-child {
+    @include spacer_body;
+  }
 }
 
 .layout-section__inner {

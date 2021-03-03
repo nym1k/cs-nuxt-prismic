@@ -1,54 +1,56 @@
 <template>
-  <LayoutSection
-    v-if="product"
-  >
-    <template #header>
-      <NuxtLink
-        to="/merch"
-        class="prd-Link"
-      >
-        &lt; Back to All Merch
-      </NuxtLink>
-    </template>
-    <template #default>
-      <div class="prd-Columns">
-        <div class="prd-Column">
-          <PrismicImage
-            :field="product.featured_image"
-          />
-        </div>
-        <div class="prd-Column">
-          <h3
-            class="prd-Title"
-            v-html="$prismic.asText(product.title)"
-          />
-          <PrismicRichText
-            class="prd-Text cms-richtext"
-            :field="product.description"
-          />
-          <div class="prd-Purchase">
-            <p class="prd-Purchase_Heading">
-              Purchase now:
-            </p>
-            <ul class="prd-Purchase_Items">
-              <li
-                v-for="(item, index) in product.links"
-                :key="'link-item-' + index"
-                class="prd-Purchase_Item"
-              >
-                <PrismicLink
-                  :field="item.link_url"
-                  class="prd-Purchase_Button"
+  <div class="prd-Product">
+    <LayoutSection
+      v-if="product"
+    >
+      <template #header>
+        <NuxtLink
+          to="/merch"
+          class="prd-Link"
+        >
+          &lt; Back to All Merch
+        </NuxtLink>
+      </template>
+      <template #default>
+        <div class="prd-Columns">
+          <div class="prd-Column">
+            <PrismicImage
+              :field="product.featured_image"
+            />
+          </div>
+          <div class="prd-Column">
+            <h3
+              class="prd-Title"
+              v-html="$prismic.asText(product.title)"
+            />
+            <PrismicRichText
+              class="prd-Text cms-richtext"
+              :field="product.description"
+            />
+            <div class="prd-Purchase">
+              <p class="prd-Purchase_Heading">
+                Purchase now:
+              </p>
+              <ul class="prd-Purchase_Items">
+                <li
+                  v-for="(item, index) in product.links"
+                  :key="'link-item-' + index"
+                  class="prd-Purchase_Item"
                 >
-                  {{ item.link_text[0].text }}
-                </PrismicLink>
-              </li>
-            </ul>
+                  <PrismicLink
+                    :field="item.link_url"
+                    class="prd-Purchase_Button"
+                  >
+                    {{ item.link_text[0].text }}
+                  </PrismicLink>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </template>
-  </LayoutSection>
+      </template>
+    </LayoutSection>
+  </div>
 </template>
 
 <script>
@@ -79,6 +81,10 @@ export default {
 
 <style lang="scss" scoped>
   @include page_transition;
+
+  .prd-Product {
+    min-height: calc(100vh - #{$headerHeight});
+  }
 
   .prd-Columns {
     @include break-min($md) {

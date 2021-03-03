@@ -7,7 +7,13 @@
     <div class="hd-Header_Inner">
       <ul class="hd-Header_Items">
         <li class="hd-Header_Item">
-          <GlobalLogo />
+          <NuxtLink to="/" class="hd-Header_Logo">
+            <h1
+              class="hd-Header_LogoText"
+              v-html="$prismic.asText($store.state.headerData.title)"
+            />
+            <GlobalLogo />
+          </NuxtLink>
         </li>
         <li class="hd-Header_Item">
           <NavigationHeader />
@@ -89,5 +95,14 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .hd-Header_Logo {
+    display: block;
+    width: 200px;
+  }
+
+  .hd-Header_LogoText {
+    display: none;
   }
 </style>

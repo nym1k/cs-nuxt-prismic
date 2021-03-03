@@ -5,6 +5,7 @@
   >
     <LayoutHeader />
     <Nuxt />
+    <LayoutFooter />
   </main>
 </template>
 
@@ -12,6 +13,7 @@
 export default {
   async middleware ({ store, $prismic }) {
     await store.dispatch('fetchHeaderData', $prismic)
+    await store.dispatch('fetchFooterData', $prismic)
   },
 
   head () {

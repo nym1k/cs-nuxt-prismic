@@ -1,6 +1,15 @@
 {
+  "CardPost": {
+    "description": "Auto imported from components/cards/Post.vue"
+  },
   "CardProduct": {
     "description": "Auto imported from components/cards/Product.vue"
+  },
+  "GlobalLogo": {
+    "description": "Auto imported from components/global/Logo.vue"
+  },
+  "LayoutFooter": {
+    "description": "Auto imported from components/layout/Footer.vue"
   },
   "LayoutHeader": {
     "description": "Auto imported from components/layout/Header.vue"
@@ -8,10 +17,16 @@
   "LayoutSection": {
     "description": "Auto imported from components/layout/Section.vue"
   },
-  "Logo": {
-    "description": "Auto imported from components/Logo.vue"
+  "NavigationFooter": {
+    "description": "Auto imported from components/navigation/Footer.vue"
   },
   "NavigationHeader": {
     "description": "Auto imported from components/navigation/Header.vue"
+  },
+  "Logo": {
+    "description": "Auto imported from components/Logo.vue"
+  },
+  "HeroPost": {
+    "description": "Auto imported from components/hero/Post.vue"
   }
 }

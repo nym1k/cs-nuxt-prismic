@@ -42,6 +42,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .pst-Post {
+    min-height: 100vh;
+  }
+
   .pst-Post_Inner {
     @include inner;
   }
