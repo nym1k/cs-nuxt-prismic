@@ -13,7 +13,6 @@
   }
 
   p {
-    @include font_copy-text-2;
     margin-top: $item-padding;
     margin-bottom: $item-padding;
 
@@ -23,6 +22,10 @@
     h5 + &,
     h6 + & {
       margin-top: $item-padding;
+    }
+
+    em {
+      color: $color-accent;
     }
 
     &:first-child {
@@ -47,7 +50,7 @@
   }
 
   li {
-    @include font_copy-text-2;
+    @include font_body-text;
     color: inherit;
     margin-bottom: 0.625rem; // 10px
 

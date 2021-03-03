@@ -15,7 +15,7 @@ fieldset {
 
 input,
 textarea {
-  @include font_copy-text-1;
+  @include font_body-text;
   background-color: #363636;
   border: 1px solid $color-white;
   color: $color-white;

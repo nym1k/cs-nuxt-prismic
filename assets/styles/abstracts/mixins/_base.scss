@@ -55,6 +55,35 @@
   @include spacer_bottom;
 }
 
+@mixin spacer_padding_top {
+  padding-top: $spacer-small;
+
+  @include break-min($sm) {
+    padding-top: $spacer-medium;
+  }
+
+  @include break-min($md) {
+    padding-top: $spacer-large;
+  }
+}
+
+@mixin spacer_padding_bottom {
+  padding-bottom: $spacer-small;
+
+  @include break-min($sm) {
+    padding-bottom: $spacer-medium;
+  }
+
+  @include break-min($md) {
+    padding-bottom: $spacer-large;
+  }
+}
+
+@mixin spacer_body {
+  @include spacer_padding_top;
+  @include spacer_padding_bottom;
+}
+
 //-------------------------------------------------
 // Inner
 //-------------------------------------------------

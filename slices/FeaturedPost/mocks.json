@@ -1,0 +1,17 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "FeaturedPost",
+    "primary": {
+      "post": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      }
+    },
+    "items": [],
+    "slice_type": "featured_post"
+  }
+]

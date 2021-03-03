@@ -70,10 +70,6 @@ export default {
         return {}
       }
     }
-  },
-
-  mounted () {
-    console.log(this.slice)
   }
 }
 </script>

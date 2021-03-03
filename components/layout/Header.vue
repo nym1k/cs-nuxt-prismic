@@ -37,14 +37,6 @@
   </header>
 </template>
 
-<script>
-export default {
-  mounted () {
-    console.log(this.$store.state.headerData)
-  }
-}
-</script>
-
 <style lang="scss" scoped>
   .hd-Header {
     background-color: $color-secondary-dark;
