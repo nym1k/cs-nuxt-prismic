@@ -1,40 +1,42 @@
 <template>
   <section class="her-Home">
-    <div class="her-Home_Content">
-      <PrismicRichText
-        :field="slice.primary.title"
-        class="her-Home_Title"
-      />
-      <PrismicRichText
-        :field="slice.primary.text"
-        class="her-Home_Text"
-      />
-      <div
-        v-if="slice.primary.buttonPrimaryURL || slice.primary.buttonSecondaryURL"
-        class="her-Home_Buttons"
-      >
-        <ul class="her-Home_Item">
-          <li
-            v-if="slice.primary.buttonPrimaryURL"
-            class="her-Home_Item"
+    <div class="her-Home_Inner">
+      <div class="her-Home_Body">
+        <div class="her-Home_Content">
+          <h2 class="her-Home_Title">
+            {{ $prismic.asText(slice.primary.title) }}
+          </h2>
+          <h3 class="her-Home_Text cms-richtext">
+            {{ $prismic.asText(slice.primary.text) }}
+          </h3>
+          <ul
+            v-if="slice.primary.buttonPrimaryURL || slice.primary.buttonSecondaryURL"
+            class="her-Home_Items"
           >
-            <NuxtLink
-              :to="slice.primary.buttonPrimaryURL"
+            <li
+              v-if="slice.primary.buttonPrimaryURL"
+              class="her-Home_Item"
             >
-              {{ slice.primary.buttonPrimaryText }}
-            </NuxtLink>
-          </li>
-          <li
-            v-if="slice.primary.buttonSecondaryURL"
-            class="her-Home_Item"
-          >
-            <NuxtLink
-              :to="slice.primary.buttonSecondaryURL"
+              <NuxtLink
+                :to="slice.primary.buttonPrimaryURL"
+                class="her-Home_Link"
+              >
+                {{ slice.primary.buttonPrimaryText }}
+              </NuxtLink>
+            </li>
+            <li
+              v-if="slice.primary.buttonSecondaryURL"
+              class="her-Home_Item"
             >
-              {{ slice.primary.buttonSecondaryText }}
-            </NuxtLink>
-          </li>
-        </ul>
+              <NuxtLink
+                :to="slice.primary.buttonSecondaryURL"
+                class="her-Home_Link"
+              >
+                {{ slice.primary.buttonSecondaryText }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <PrismicImage
@@ -76,36 +78,83 @@ export default {
 
 <style lang="scss" scoped>
 .her-Home {
+  @include spacer_padding_bottom;
   background-color: black;
+  padding-top: $headerHeight;
   min-height: 100vh;
+
+  display: flex;
+
+  position: relative;
+}
+
+.her-Home_Inner {
+  @include inner;
+  display: flex;
+}
+
+.her-Home_Body {
+  width: 100%;
+
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: center;
 }
 
 .her-Home_Content {
   color: white;
-  margin: 0 auto;
-  padding: 8em 4em;
-  text-align: center;
+  // text-align: center;
   max-width: 60rem;
+
   position: relative;
   z-index: 4;
 }
 
 .her-Home_Title {
-  margin-bottom: 2em;
+  @include font_huge;
+  font-weight: $fw-light;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: $item-padding;
+  text-shadow: 2px 4px 4px rgba($color-secondary-dark, 0.2),
+    0px -5px 10px rgba($color-white, 0.15);
+}
+
+.her-Home_Text {
+  @include font_heading-3;
+  margin-bottom: $item-padding;
+}
+
+.her-Home_Items {
+  @include structural_ul;
+  margin-top: $item-padding;
+
+  display: flex;
+}
+
+.her-Home_Item {
+  margin-right: $grid-gap;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .her-Home_Link {
-  color: $color-white;
-  margin-top: $spacer-large;
+  .her-Home_Item:nth-child(odd) & {
+    @include button_primary;
+  }
+
+  .her-Home_Item:nth-child(even) & {
+    @include button_secondary;
+  }
 }
 
 .her-Home_BackgroundImage {
   object-fit: cover;
   width: 100%;
   height: 100%;
+
   position: absolute;
   top: 0;
   right: 0;
@@ -118,6 +167,7 @@ export default {
   object-fit: cover;
   width: 100%;
   height: 100%;
+
   position: absolute;
   top: 0;
   right: 0;
@@ -130,6 +180,7 @@ export default {
   background-color: rgba(0,0,0,0.2);
   width: 100%;
   height: 100%;
+
   position: absolute;
   top: 0;
   right: 0;

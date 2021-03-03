@@ -41,9 +41,8 @@
   color: $color-white;
 
   &:hover {
-    background-color: $color-secondary;
-    border-color: $color-white;
-    color: $color-white;
+    background-color: $color-primary-dark;
+    border-color: $color-primary-dark;
   }
 }
 

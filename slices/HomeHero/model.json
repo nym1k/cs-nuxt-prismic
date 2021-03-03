@@ -82,7 +82,7 @@
           },
           "type": "Text"
         },
-        "ButtonSecondaryURL": {
+        "buttonSecondaryURL": {
           "config": {
             "label": "Secondary Button URL",
             "placeholder": ""

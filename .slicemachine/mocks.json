@@ -1,3 +1,10 @@
 {
-  "FeaturedPost": {}
+  "FeaturedPost": {},
+  "HomeHero": {
+    "primary": {
+      "buttonSecondaryURL": {
+        "content": null
+      }
+    }
+  }
 }
