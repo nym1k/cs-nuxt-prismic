@@ -81,12 +81,24 @@ export default {
   @include page_transition;
 
   .prd-Columns {
-    display: flex;
-    justify-content: space-between;
+    @include break-min($md) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   .prd-Column {
-    width: calc(50% - #{$grid-gap / 2});
+    @include break-min($md) {
+      width: calc(50% - #{$grid-gap / 2});
+    }
+
+    &:last-child {
+      margin-top: $item-padding;
+
+      @include break-min($md) {
+        margin-top: 0;
+      }
+    }
   }
 
   .prd-Title {

@@ -36,7 +36,7 @@ export default {
   },
 
   mounted () {
-    this.$store.commit('changeNavLayout', 'page')
+    this.$store.commit('changeNavLayout', 'post')
   }
 }
 </script>

@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
   .lyt-Main {
-    &:not(.lyt-Main--homepage) {
+    &:not(.lyt-Main--homepage, .lyt-Main--post) {
       padding-top: $headerHeight;
     }
   }

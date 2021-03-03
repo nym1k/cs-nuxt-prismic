@@ -44,6 +44,7 @@ export default {
 <style lang="scss" scoped>
   .her-Post {
     background-color: $color-secondary-dark;
+    padding-top: $headerHeight;
     position: relative;
   }
 
