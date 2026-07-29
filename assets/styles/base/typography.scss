@@ -50,7 +50,7 @@ a {
     color: currentColor;
   }
 
-  .has-text-color & {
+  &:visited {
     color: inherit;
   }
 }
